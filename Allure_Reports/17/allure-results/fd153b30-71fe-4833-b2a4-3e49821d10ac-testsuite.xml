@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1617727297004' stop='1617727319954'>
+    <name>Test Contact Us form WebDriverUniversity</name>
+    <title>Test Contact Us form WebDriverUniversity</title>
+    <test-cases>
+        <test-case start='1617727297005' status='passed' stop='1617727315772'>
+            <name>Should be able to submit a successful submission via contact us form</name>
+            <title>Should be able to submit a successful submission via contact us form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617727315772' status='passed' stop='1617727319953'>
+            <name>Should not be able to submit a successful submission via contact us form  as all fields are required</name>
+            <title>Should not be able to submit a successful submission via contact us form  as all fields are required</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+                <parameter kind='argument' name='browser' value='chrome-89.0.4389.114'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
