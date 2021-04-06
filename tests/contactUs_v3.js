@@ -14,7 +14,7 @@ describe("Test Contact Us form WebDriverUniversity", function() {
   });
 
   contactUsDetails.forEach(function (contactDetail) {
-  it.only("Should be able to submit a successful submission via contact us form", function(done) {
+  it("Should be able to submit a successful submission via contact us form", function(done) {
     const firstName = $("[name='first_name']");
     firstName.setValue(contactDetail.firstName);
     const lastName = $("[name='last_name']");

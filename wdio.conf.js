@@ -6,7 +6,7 @@ if(process.env.SERVER === 'prod') {
   baseUrl = "http://www.webdriveruniversity.com";
 }
 
-let timeout = process.env.DEBUG ? 99999999 : 10000;
+let timeout = process.env.DEBUG ? 99999999 : 20000;
 
 exports.config = {
     //
@@ -27,11 +27,11 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './tests/**/*.js'
+        './tests/*.js'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        './pageObjects/*_Page.js'
     ],
     //
     // ============
@@ -139,10 +139,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['dot'],
-
-
-
+    reporters: ['dot',
+                  ['allure', {
+                    outputDir: './reports/allure-results/',
+                    disableWebdriverStepsReporting: true,
+                    disableWebdriverScreenshotsReporting: false,
+                    useCucumberStepReporter: false
+                  }]
+                ],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -183,8 +187,10 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
-    // },
+    beforeSession: function (config, capabilities, specs) {
+      const del = require('del');
+      del(['allure-report', 'errorShots', 'reports']);
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
@@ -256,6 +262,8 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that ran
      */
     // after: function (result, capabilities, specs) {
+    //   let name = 'ERROR-chrome-' + Date.now();
+    //   browser.saveScreenshot('./errorShots/' + name + '.png');
     // },
     /**
      * Gets executed right after terminating the webdriver session.
